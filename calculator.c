@@ -26,6 +26,13 @@ int square(int i) {
 int cube(int i) {
     return (i * i * i);
 }
+float inverse(int i) {
+    if (i != 0) {
+        return 1.0 / i;
+    } else {
+        printf("Error: Division by zero is not allowed.\n");
+        return 0;
+    }
 
 int main() {
     int a, b;
@@ -81,7 +88,7 @@ int main() {
             case 'i':
                 printf("Enter an integer: ");
                 scanf("%d", &a);
-                printf("Will be implemented soon...\n");
+                printf("The result of 1/%d is %.2f\n", a, inverse(a));
                 break;
             default:
                 printf("Invalid operation. Please try again.\n");
